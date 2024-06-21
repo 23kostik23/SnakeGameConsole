@@ -90,19 +90,19 @@ namespace SnakeGameConsole
 
         public void HandleInput(ConsoleKeyInfo x)
         {
-            if (x.Key == ConsoleKey.W)
+            if (x.Key == ConsoleKey.W && snake.CurrentDirection != Direction.Down)
             {
                 snake.CurrentDirection = Direction.Up;
             }
-            else if (x.Key == ConsoleKey.A)
+            else if (x.Key == ConsoleKey.A && snake.CurrentDirection != Direction.Right)
             {
                 snake.CurrentDirection = Direction.Left;
             }
-            else if (x.Key == ConsoleKey.S)
+            else if (x.Key == ConsoleKey.S && snake.CurrentDirection != Direction.Up)
             {
                 snake.CurrentDirection = Direction.Down;
             }
-            else if (x.Key == ConsoleKey.D)
+            else if (x.Key == ConsoleKey.D && snake.CurrentDirection != Direction.Left)
             {
                 snake.CurrentDirection = Direction.Right;
             }
